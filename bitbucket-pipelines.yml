@@ -1,0 +1,26 @@
+image: node:18
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - .next/**
+      - step:
+          name: Remove Build Folder
+          script:
+            - ssh"
+      - step:
+          name: Add Build Folder
+          script:
+            - ssh"
+      - step:
+          name: Add Folder Permission
+          script:
+            - ssh "
+

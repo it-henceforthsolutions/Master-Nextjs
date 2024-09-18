@@ -1,0 +1,338 @@
+@import 'theme';
+
+// ************************ Layout **********************
+
+
+// write all overwrite css here
+.ant-layout {
+    padding: 20px 0 20px 24px;
+    background: $gradient-bg !important;
+
+    .ant-layout-sider {
+        background: #FFFFFF80 !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+        width: 260px !important;
+        flex: 0 0 260px !important;
+
+        .ant-menu {
+            background: transparent !important;
+
+            .ant-menu-item {
+                padding: 4px 20px !important;
+                border-radius: 0 !important;
+                height: auto !important;
+                color: $secondary !important;
+                border-left: 2px solid transparent !important;
+                font-size: 14px;
+                font-weight: 500;
+                display: flex !important;
+                margin-bottom: 8px !important;
+                align-items: center !important;
+
+                svg {
+                    min-width: 24px;
+                }
+            }
+
+            .ant-menu-item-selected {
+                background: linear-gradient(90deg, rgba(153, 122, 247, 0.1) 0%, rgba(152, 122, 246, 0.02) 100%) !important;
+                border-left: 2px solid $primary !important;
+                color: $primary !important;
+
+                svg path {
+                    fill: $primary;
+                }
+            }
+        }
+
+    }
+
+    .ant-layout-sider-collapsed {
+        min-width: 0px !important;
+        max-width: 0px !important;
+        width: 0px !important;
+        flex: 0 0 0px !important;
+    }
+
+    @media (max-width:575px) {
+        padding: 0 !important;
+    }
+
+    .ant-layout-header {
+        height: unset !important;
+        line-height: 0 !important;
+        padding: 14px 20px !important;
+        background: $white !important;
+        position: sticky;
+        top: 0;
+        z-index: 11;
+    }
+}
+
+// ****************************** Components **************************
+
+.ant-btn-default {
+    background: $gradient-secondary !important;
+    border: none !important;
+    color: $white !important;
+}
+
+.ant-btn-primary {
+    background: $gradient-primary !important;
+    border: none !important;
+}
+
+.ant-btn-text {
+    background: transparent !important;
+}
+
+.ant-btn-background-ghost {
+    background: transparent !important;
+    border: 1px solid $primary !important;
+    color: $primary !important;
+}
+
+.btn-secondary {
+    background: $gradient-light !important;
+    border: none !important;
+    color: $white !important;
+}
+
+.ant-typography-secondary {
+    color: $secondary !important;
+}
+
+.anticon.ant-input-password-icon {
+    color: $secondary !important;
+}
+
+.ant-select-selector {
+    padding-inline: 20px !important;
+}
+
+.country_code {
+    .ant-select-selector {
+        border-radius: 40px 0 0 40px !important;
+        border-right: 1px solid $border-color !important;
+    }
+}
+
+table>tbody>tr:nth-child(odd) {
+    background: $primary-light !important;
+}
+
+table>tbody>tr:nth-child(even) {
+    background: $white !important;
+}
+
+.ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    content: unset !important;
+}
+
+table>thead>tr>th:first-child {
+    border-radius: 16px 0 0 0 !important;
+}
+
+table>thead>tr>th:last-child {
+    border-radius: 0 16px 0 0 !important;
+}
+
+table {
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+td,
+th {
+    white-space: nowrap;
+}
+
+.table_dropdown {
+    .ant-select-selector {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: auto !important;
+    }
+}
+
+.ant-dropdown-menu {
+    min-width: 180px !important;
+    padding: 6px 16px !important;
+}
+
+.ant-dropdown-menu-item-divider {
+    background: $border-color !important;
+}
+
+.ant-dropdown-menu-item {
+    padding-inline: 0 !important;
+}
+
+.ant-divider {
+    background: $border-color !important;
+}
+
+// ********************** Ant Steps ***************************
+.ant-steps-item-icon {
+    display: none !important;
+}
+
+.ant-steps-item-title::after {
+    background: rgba(153, 122, 247, 0.5) !important;
+}
+
+.ant-steps-item {
+    padding: 0 !important;
+}
+
+.ant-steps-item-finish,
+.ant-steps-item-active {
+    .ant-steps-item-title {
+        background: $gradient-primary !important;
+        border: 1px solid transparent !important;
+        color: $white !important;
+    }
+}
+
+.ant-steps-item-title {
+    background: $white !important;
+    border: 1px solid $primary !important;
+    color: $primary !important;
+    border-radius: 40px !important;
+    padding: 0px 20px !important;
+    font-size: 14px !important;
+}
+
+.ant-select-dropdown {
+    background: $white !important;
+    border-radius: 8px !important;
+}
+
+.ant-select-item-option-selected {
+    background: $gradient-primary !important;
+    color: $white !important;
+}
+
+.ant-picker-dropdown {
+    border-radius: 8px !important;
+}
+
+.ant-picker-panel-container {
+    // width: 100% !important;
+    border-radius: 8px !important;
+}
+
+// ******************************** Custom Tabs ************************************
+.custom-nav-list {
+    width: 100% !important;
+    background: $white !important;
+    border-radius: 40px !important;
+    overflow: auto !important;
+
+    .custom-tab {
+        width: 100% !important;
+        margin: 0 !important;
+        background: $white !important;
+        border-radius: 40px !important;
+        padding: 10px 24px !important;
+
+        .custom-tab-btn {
+            text-align: center;
+            width: 100% !important;
+        }
+    }
+
+    .custom-tab-active {
+        background: $primary !important;
+
+        .custom-tab-btn {
+            color: $white !important;
+        }
+    }
+
+    .custom-ink-bar {
+        display: none !important;
+    }
+}
+
+.ant-tabs-nav::before {
+    border-color: #DBDBDB !important;
+}
+
+.ant-switch-handle {
+    top: 0 !important;
+    bottom: 0 !important;
+    margin-block: auto !important;
+}
+
+.button-stop-recording {
+    height: 350px;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004A7F;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
+
+
+
+.ant-modal-content {
+    overflow: hidden !important;
+}
+
+.chat-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.chat-btn-chevrondowndiv {
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.chat-btn:hover .chat-btn-chevrondowndiv {
+    display: block;
+}
+
+.ant-picker-panel {
+    position: relative;
+    overflow: hidden;
+    margin-top: 39px;
+}
+
+.ant-picker-footer-extra {
+    position: absolute;
+    border-radius: 8px 8px 0 0;
+    top: 0;
+    background-color: $white;
+    width: 112px;
+}
+
+.ant-picker-time-panel-column {
+    overflow-y: auto !important;
+}
+
+.edit-modal-content, .edit-modal-title {
+    background: $primary-light !important;
+}
